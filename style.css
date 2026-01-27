@@ -27,6 +27,28 @@ button {
   box-shadow: 0 0 10px hotpink, 0 0 20px cyan; /* glowing effect */
 }
 
+button:hover {
+  background: cyan;              /* swap background and text */
+  color: hotpink;
+  box-shadow: 0 0 20px cyan, 0 0 30px hotpink, 0 0 40px white; /* extra glow */
+  transform: scale(1.1);        /* grows slightly when hovered */
+}
+
+button:active {
+  transform: scale(0.95);       /* shrink when clicked */
+  box-shadow: 0 0 5px hotpink, 0 0 10px cyan; /* less glow when pressed */
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px hotpink, 0 0 20px cyan; }
+  50% { box-shadow: 0 0 20px cyan, 0 0 30px hotpink; }
+}
+
+button {
+  animation: pulse 2s infinite;
+}
+
+
 body.inverted {
   filter: invert(100%);
   background-color: white;
