@@ -1,4 +1,5 @@
-.inverted {
+body.inverted {
   filter: invert(1) hue-rotate(180deg);
 }
+
 
