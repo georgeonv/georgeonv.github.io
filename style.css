@@ -1,6 +1,5 @@
-body.inverted {
-  filter: invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.2);
+html {
+  filter: invert(90%);
 }
-
 
 
