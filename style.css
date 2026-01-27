@@ -14,6 +14,19 @@ marquee {
   margin: 50px;
 }
 
+button {
+  background: hotpink;           /* main color */
+  color: white;                  /* text color */
+  font-family: "Comic Sans MS", cursive;  /* classic Y2K font */
+  font-size: 18px;
+  padding: 12px 24px;            /* nice size to click */
+  border: 2px solid cyan;        /* neon outline */
+  border-radius: 12px;           /* rounded corners for soft look */
+  cursor: pointer;               /* pointer on hover */
+  transition: all 0.3s ease;     /* smooth hover transitions */
+  box-shadow: 0 0 10px hotpink, 0 0 20px cyan; /* glowing effect */
+}
+
 body.inverted {
   filter: invert(100%);
   background-color: white;
