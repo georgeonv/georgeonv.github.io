@@ -27,15 +27,6 @@ button {
   box-shadow: 0 0 10px hotpink, 0 0 20px cyan; /* glowing effect */
 }
 
-button:hover {
-  box-shadow: 0 0 20px cyan, 0 0 30px hotpink, 0 0 40px white; /* extra glow */
-  transform: scale(1.1);        /* grows slightly when hovered */
-}
-
-button:active {
-  transform: scale(0.95);       /* shrink when clicked */
-  box-shadow: 0 0 5px hotpink, 0 0 10px cyan; /* less glow when pressed */
-}
 
 :root {
   --Cshadow0: 10px;
