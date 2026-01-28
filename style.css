@@ -43,6 +43,18 @@ button::before {
   animation: glowPulse 5s ease-in-out infinite;
 }
 
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+
 
 body.inverted {
   filter: invert(100%);
