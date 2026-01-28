@@ -37,10 +37,33 @@ button:active {
   box-shadow: 0 0 5px hotpink, 0 0 10px cyan; /* less glow when pressed */
 }
 
+:root {
+  --Cshadow0: 10px;
+  --Pshadow0: 10px;
+  --Cshadow1: 15px;
+  --Pshadow1: 20px;
+  --Cshadow2: 20px;
+  --Pshadow2: 25px;
+  --Cshadow3: 15px;
+  --Pshadow3: 15px;
+}
+
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 20px cyan, 0 0 10px hotpink; }
-  25%, 75% { box-shadow: 0 0 20px cyan, 0 0 25px hotpink; }
-  50% { box-shadow: 0 0 20px cyan, 0 0 30px hotpink; }
+  0% {
+    box-shadow: 0 0 var(--Cshadow0) cyan, 0 0 var(--Pshadow0) hotpink;
+  }
+  25% {
+    box-shadow: 0 0 var(--Cshadow1) cyan, 0 0 var(--Pshadow1) hotpink;
+  }
+  50% {
+    box-shadow: 0 0 var(--Cshadow2) cyan, 0 0 var(--Pshadow2) hotpink;
+  }
+  75% {
+    box-shadow: 0 0 var(--Cshadow3) cyan, 0 0 var(--Pshadow3) hotpink;
+  }
+  100% {
+    box-shadow: 0 0 var(--Cshadow0) cyan, 0 0 var(--Pshadow0) hotpink;
+  }
 }
 
 button {
