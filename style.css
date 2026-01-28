@@ -15,50 +15,32 @@ marquee {
 }
 
 button {
-  background: hotpink;           /* main color */
-  color: white;                  /* text color */
-  font-family: "Courier New", monospace;  /* classic Y2K font */
-  font-size: 18px;
-  padding: 12px 24px;            /* nice size to click */
-  border: 2px solid cyan;        /* neon outline */
-  border-radius: 12px;           /* rounded corners for soft look */
-  cursor: pointer;               /* pointer on hover */
-  transition: all 0.3s ease;     /* smooth hover transitions */
-  box-shadow: 0 0 10px hotpink, 0 0 20px cyan; /* glowing effect */
+  position: relative;
+  background: hotpink;
+  color: white;
+  font-family: "Courier New", monospace;
+  padding: 12px 24px;
+  border: 2px solid cyan;
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 1;
 }
 
-
-:root {
-  --Cshadow0: 10px;
-  --Pshadow0: 10px;
-  --Cshadow1: 15px;
-  --Pshadow1: 20px;
-  --Cshadow2: 20px;
-  --Pshadow2: 25px;
-  --Cshadow3: 15px;
-  --Pshadow3: 15px;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 var(--Cshadow0) cyan, 0 0 var(--Pshadow0) hotpink;
-  }
-  25% {
-    box-shadow: 0 0 var(--Cshadow1) cyan, 0 0 var(--Pshadow1) hotpink;
-  }
-  50% {
-    box-shadow: 0 0 var(--Cshadow2) cyan, 0 0 var(--Pshadow2) hotpink;
-  }
-  75% {
-    box-shadow: 0 0 var(--Cshadow3) cyan, 0 0 var(--Pshadow3) hotpink;
-  }
-  100% {
-    box-shadow: 0 0 var(--Cshadow0) cyan, 0 0 var(--Pshadow0) hotpink;
-  }
-}
-
-button {
-  animation: pulse 5s infinite ease-in-out;
+button::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    cyan,
+    hotpink,
+    transparent 70%
+  );
+  opacity: 0.6;
+  filter: blur(20px);
+  z-index: -1;
+  animation: glowPulse 5s ease-in-out infinite;
 }
 
 
