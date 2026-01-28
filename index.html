@@ -14,9 +14,30 @@
   <p>more soon ✿</p>
 </div>
 
-<script src="script.js"></script>
+  
+    <h1 id="timer">10:00</h1> <!-- 10 minutes countdown -->
+    
+    <script>
+        let totalSeconds = 10 * 60; // 10 minutes
+        const timerDisplay = document.getElementById('timer');
+
+        const interval = setInterval(() => {
+            let minutes = Math.floor(totalSeconds / 60);
+            let seconds = totalSeconds % 60;
+            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            totalSeconds--;
+
+            if (totalSeconds < 0) {
+                clearInterval(interval);
+                alert("Time's up!");
+            }
+        }, 1000);
+
+
 
   
+<script src="script.js"></script>
+
 </body>
 </html>
 
